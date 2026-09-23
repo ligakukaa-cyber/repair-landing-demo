@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>СТЕНА &mdash; ремонт квартир под ключ в Москве</title>
+<meta name="description" content="Ремонт квартир под ключ: смета за один день, фиксированная цена в договоре, сдача в срок. Рассчитайте стоимость ремонта онлайн за минуту.">
+<meta name="theme-color" content="#F7F5F1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <a class="logo" href="#top">СТЕНА<span>ремонт под ключ</span></a>
+  <nav class="menu">
+    <a href="#works">Работы</a>
+    <a href="#calc">Расчёт</a>
+    <a href="#steps">Этапы</a>
+    <a href="#faq">Вопросы</a>
+  </nav>
+  <a class="btn btn-dark" href="#form">Вызвать замерщика</a>
+</header>
+
+<!-- ПЕРВЫЙ ЭКРАН -->
+<section class="hero" id="top">
+  <img class="hero-bg" src="assets/hero.jpg" alt="Готовая гостиная после ремонта" fetchpriority="high">
+  <div class="hero-in">
+    <span class="tag reveal">Работаем в Москве и области с 2014 года</span>
+    <h1 class="reveal">Ремонт квартиры<br>с ценой, которая<br><em>не вырастет</em></h1>
+    <p class="reveal">Смета на все работы и материалы — за один день. Сумма фиксируется
+      в договоре: доплат «по ходу дела» не будет.</p>
+    <div class="hero-act reveal">
+      <a class="btn btn-accent" href="#calc">Рассчитать стоимость</a>
+      <a class="btn btn-ghost" href="#works">Посмотреть работы</a>
+    </div>
+    <ul class="hero-facts reveal">
+      <li><b>14 лет</b><span>на рынке ремонта</span></li>
+      <li><b>620+</b><span>квартир сдано</span></li>
+      <li><b>3 года</b><span>гарантия по договору</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ДО / ПОСЛЕ -->
+<section class="section ba-sec" id="works">
+  <div class="wrap">
+    <div class="head">
+      <h2 class="reveal">Как меняется квартира</h2>
+      <p class="reveal">Потяните ползунок — слева состояние до ремонта, справа результат.</p>
+    </div>
+
+    <div class="ba reveal" id="ba">
+      <img class="ba-after" src="assets/after.jpg" alt="Гостиная после ремонта">
+      <div class="ba-before" id="baBefore">
+        <img src="assets/before.jpg" alt="Комната до ремонта">
+      </div>
+      <div class="ba-line" id="baLine"><button class="ba-grip" aria-label="Передвинуть границу">⟷</button></div>
+      <span class="ba-tag ba-tag-l">До</span>
+      <span class="ba-tag ba-tag-r">После</span>
+    </div>
+
+    <div class="gallery">
+      <figure class="card reveal"><img src="assets/kitchen.jpg" alt="Кухня после ремонта" loading="lazy">
+        <figcaption><b>Кухня 9 м²</b><span>Косметический ремонт, 24 дня</span></figcaption></figure>
+      <figure class="card reveal"><img src="assets/bathroom.jpg" alt="Ванная после ремонта" loading="lazy">
+        <figcaption><b>Санузел 4 м²</b><span>Ремонт «под ключ», 31 день</span></figcaption></figure>
+      <figure class="card reveal"><img src="assets/bedroom.jpg" alt="Спальня после ремонта" loading="lazy">
+        <figcaption><b>Спальня 14 м²</b><span>Капитальный ремонт, 28 дней</span></figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- КАЛЬКУЛЯТОР -->
+<section class="section calc-sec" id="calc">
+  <div class="wrap calc-grid">
+    <div class="calc-left">
+      <h2 class="reveal">Сколько будет стоить ваш ремонт</h2>
+      <p class="reveal">Предварительный расчёт по площади и типу работ. Точную смету составим
+        после бесплатного замера — обычно она отличается не больше чем на 5&nbsp;%.</p>
+      <ul class="calc-note reveal">
+        <li>В расчёт входят работы и черновые материалы</li>
+        <li>Чистовые материалы выбираете сами, поможем с подбором</li>
+        <li>Замер и смета — бесплатно, без обязательств</li>
+      </ul>
+      <img class="calc-photo reveal" src="assets/tools.jpg" alt="Инструменты на объекте" loading="lazy">
+    </div>
+
+    <form class="calc reveal" id="calcForm" novalidate>
+      <label class="field">
+        <span>Площадь квартиры, м²</span>
+        <input type="number" id="area" min="10" max="400" value="54" inputmode="numeric">
+      </label>
+
+      <fieldset class="field">
+        <span>Тип ремонта</span>
+        <div class="opts" id="kind">
+          <label><input type="radio" name="kind" value="cosmetic" checked><i>Косметический</i></label>
+          <label><input type="radio" name="kind" value="capital"><i>Капитальный</i></label>
+          <label><input type="radio" name="kind" value="design"><i>По дизайн-проекту</i></label>
+        </div>
+      </fieldset>
+
+      <fieldset class="field">
+        <span>Что добавить</span>
+        <div class="checks" id="extras">
+          <label><input type="checkbox" value="wiring"><i>Замена электрики</i></label>
+          <label><input type="checkbox" value="plumb"><i>Замена сантехники</i></label>
+          <label><input type="checkbox" value="floor"><i>Стяжка пола</i></label>
+          <label><input type="checkbox" value="doors"><i>Установка дверей</i></label>
+        </div>
+      </fieldset>
+
+      <div class="total">
+        <div class="total-row"><span>Работы и черновые материалы</span><b id="sum">—</b></div>
+        <div class="total-row muted"><span>Срок работ</span><b id="days">—</b></div>
+        <div class="total-hint">Расчёт предварительный. Итог зафиксируем в договоре после замера.</div>
+      </div>
+
+      <a class="btn btn-accent btn-wide" href="#form" id="toForm">Вызвать замерщика бесплатно</a>
+    </form>
+  </div>
+</section>
+
+<!-- ЭТАПЫ -->
+<section class="section" id="steps">
+  <div class="wrap">
+    <div class="head">
+      <h2 class="reveal">Как проходит ремонт</h2>
+      <p class="reveal">Вы платите за этап только после того, как приняли предыдущий.</p>
+    </div>
+    <ol class="steps">
+      <li class="reveal"><b>01</b><h3>Замер и смета</h3><p>Приедем в удобное время, измерим, обсудим пожелания. Смету пришлём в течение дня.</p></li>
+      <li class="reveal"><b>02</b><h3>Договор и график</h3><p>Фиксируем цену, сроки и порядок оплаты по этапам. Штрафы за срыв срока — наши.</p></li>
+      <li class="reveal"><b>03</b><h3>Работы под контролем</h3><p>Прораб на объекте каждый день, фотоотчёт вам в мессенджер каждую неделю.</p></li>
+      <li class="reveal"><b>04</b><h3>Сдача и гарантия</h3><p>Принимаете работу по списку, получаете гарантию 3 года и паспорта на материалы.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ВОПРОСЫ -->
+<section class="section faq-sec" id="faq">
+  <div class="wrap">
+    <div class="head"><h2 class="reveal">Частые вопросы</h2></div>
+    <div class="faq">
+      <details class="reveal"><summary>Цена действительно не изменится?</summary>
+        <p>Да, сумма из договора не растёт. Она может измениться только если вы сами захотите
+          добавить работы — тогда подписываем допсоглашение с новой суммой.</p></details>
+      <details class="reveal"><summary>Можно ли жить в квартире во время ремонта?</summary>
+        <p>При косметическом ремонте — обычно да, работаем по комнатам. При капитальном первые
+          три недели жить будет тяжело: шум, пыль и отключения воды.</p></details>
+      <details class="reveal"><summary>Кто закупает материалы?</summary>
+        <p>Черновые материалы закупаем мы и они уже в смете. Чистовые выбираете вы, поможем
+          составить список и съездить в магазин.</p></details>
+      <details class="reveal"><summary>Что входит в гарантию 3 года?</summary>
+        <p>Все наши работы: если отойдёт плитка, треснет стяжка или потечёт стык — приезжаем
+          и переделываем за свой счёт.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- ЗАЯВКА -->
+<section class="section form-sec" id="form">
+  <div class="wrap form-grid">
+    <div>
+      <h2 class="reveal">Бесплатный замер<br>и смета за один день</h2>
+      <p class="reveal">Оставьте телефон — перезвоним в течение 15 минут в рабочее время
+        и подберём удобное время замера.</p>
+      <div class="contacts reveal">
+        <a href="tel:+74950000000">+7 495 000-00-00</a>
+        <span>Москва и область · ежедневно 9:00–21:00</span>
+      </div>
+    </div>
+
+    <form class="lead reveal" id="leadForm" novalidate>
+      <label class="field"><span>Как вас зовут</span>
+        <input type="text" name="name" id="name" placeholder="Иван" autocomplete="name"></label>
+      <label class="field"><span>Телефон</span>
+        <input type="tel" name="phone" id="phone" placeholder="+7 900 000-00-00" autocomplete="tel"></label>
+      <label class="field"><span>Комментарий (не обязательно)</span>
+        <textarea name="note" id="note" rows="3" placeholder="Двушка 54 м², нужен ремонт под ключ"></textarea></label>
+      <button class="btn btn-accent btn-wide" type="submit">Отправить заявку</button>
+      <p class="policy">Нажимая кнопку, вы соглашаетесь на обработку персональных данных.</p>
+      <p class="ok" id="ok" hidden>Заявка принята. Перезвоним в течение 15 минут.</p>
+    </form>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="wrap foot-row">
+    <span>СТЕНА — ремонт квартир под ключ</span>
+    <span class="demo">Демонстрационный сайт. Компания вымышлена, фотографии сгенерированы.</span>
+    <a href="https://t.me/VladisavSSS" target="_blank" rel="noopener">Сделал сайт: @VladisavSSS</a>
+  </div>
+</footer>
+
+<script src="js/app.js"></script>
+</body>
+</html>
